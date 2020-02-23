@@ -1,0 +1,318 @@
+body,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+
+@font-face {
+  font-family: Lato; 
+  src: url(assets/Lato-Regular.ttf); 
+ }
+
+ @font-face {
+  font-family: Lato-Black; 
+  src: url(assets/Lato-Black.ttf);
+ }
+ 
+
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  font-family: "Lato";
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  padding: 0 40px;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+h1 a {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+}
+
+h1 a::after {
+  content: "*";
+  font-weight: 300;
+  color: #f06c64;
+}
+ 
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+}
+
+.menu li:not(:last-child) {
+  margin-right: 13px;
+  }
+
+
+.menu a {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+ 
+  }
+
+  .menu a.menu-home {
+    color: #f06c64;
+  }
+
+  .menu a:hover {
+    text-decoration: underline;
+  }
+
+  .menu :not(:first-child)::before {
+  content: '';
+  display: inline-block;
+  height:3px;
+  width: 3px;
+  margin-right: 13px;
+  vertical-align: middle;
+  border-radius:50%;
+  background-color:#494e62;
+  color: #494e62;
+}
+
+/*Kostily header*/
+.menu {
+  margin-top: 6px;
+  margin-right: 0px;
+}
+
+header {
+  padding-right: 39px;
+}
+
+.menu-services-li {
+  margin-right: 14px!important;
+  }
+
+.menu-home-li {
+  margin-right: 13px!important;
+}
+
+h1 {
+  letter-spacing: 0.0001em;
+}
+
+
+/*Slider*/
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 600px;
+  padding: 0 40px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.chev-right {
+  transform: rotate(180deg);
+}
+
+.chev-left,
+.chev-right {
+  width: 16px;
+  height: 27px;
+  border: none;
+  background-color: #f06c64;
+  cursor: pointer;
+ }
+
+
+ .image-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 797px; 
+  margin-bottom: 2px;
+}
+
+/*Kostily slider*/
+
+.chev-left,
+.chev-right {
+  margin-left: 2px;
+  margin-top: -5px;
+}
+
+.iphone-horizontal {
+  margin-bottom: 1px;
+}
+
+.image-box {
+  margin-right: -1px;
+  margin-top: -1px;
+}
+
+/*Services*/
+.services {
+  height: 500px;
+  border-bottom: 6px solid #ffffff;
+  background-color: #f2f2f2;
+  padding: 68px 40px 0 40px;
+}
+
+.services h2 {
+  font-size: 30px;
+  font-family: "Lato-Black";
+  font-weight: 900;
+  line-height: 18px;
+  color: #666d89;
+  
+  text-align: left;
+  margin-bottom: 27px;
+
+}
+ 
+.services > p {
+  margin-bottom: 45px;
+  font-size: 18px;    
+  font-weight: 300;
+  word-spacing: -.2ch;            
+  line-height: 30px;
+  color: #767e9e;
+  text-align: justify;
+}
+
+.services-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item-services {
+  width: 300px;
+  height: 90px;
+  padding-left: 79px;
+  margin-right: 20px;
+  margin-bottom: 33px;
+  overflow: hidden;
+  background-position: top 3px;
+}
+
+.item-services:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.item-services h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Lato-Black";
+  font-weight: 900;
+  line-height: 18px;
+  color: #666d89;
+  text-align: left;
+}
+
+.item-services p {
+font-size: 12px;
+font-family: "Lato";
+font-weight: 400;
+line-height: 21px;
+text-align: justify;      
+color: #767e9e;
+}
+
+.design {
+  background-image: url(assets/pen-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 1px top 2px;
+}
+
+.innovation {
+  background-image: url(assets/bulb-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+}
+
+.love {
+  background-image: url(assets/heart-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+  padding-left: 81px;
+}
+
+
+/*Kostily services*/
+
+.design p {
+  margin-left: 1px;
+}
+
+.love p,
+.star p {
+  margin-left: -1px;
+}
+
+.responsibility p {
+  margin-left: 2px;
+}
+
+.innovation p {
+  margin-left: 1px;
+}
+
+.design p {
+  margin-left: 1px;
+}
+
+.support p {
+  margin-left: 1px;
+}
+
+.responsibility {
+  background-image: url(assets/phone-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 1px top 2px;
+}
+
+.support {
+  background-image: url(assets/bubble-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+}
+
+.star {
+  background-image: url(assets/star-ico.png);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+  padding-left: 81px;
+}
+
+.design h4 {
+  margin-left: 1px;
+}
+
+.responsibility h4 {
+  margin-left: 1px;
+}
+
+
+
+    
