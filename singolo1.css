@@ -240,19 +240,38 @@ color: #767e9e;
 }
 
 .design {
-  background-image: url(assets/pen-ico.png);
+  background-image: url(assets/pen-ico.svg);
   background-repeat: no-repeat;
   background-position: left 1px top 2px;
 }
 
 .innovation {
-  background-image: url(assets/bulb-ico.png);
+  background-image: url(assets/bulb-ico.svg);
   background-repeat: no-repeat;
   background-position: left 0px top 2px;
 }
 
 .love {
-  background-image: url(assets/heart-ico.png);
+  background-image: url(assets/heart-ico.svg);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+  padding-left: 81px;
+}
+
+.responsibility {
+  background-image: url(assets/phone-ico.svg);
+  background-repeat: no-repeat;
+  background-position: left 1px top 2px;
+}
+
+.support {
+  background-image: url(assets/bubble-ico.svg);
+  background-repeat: no-repeat;
+  background-position: left 0px top 2px;
+}
+
+.star {
+  background-image: url(assets/star-ico.svg);
   background-repeat: no-repeat;
   background-position: left 0px top 2px;
   padding-left: 81px;
@@ -284,26 +303,9 @@ color: #767e9e;
 
 .support p {
   margin-left: 1px;
+  
 }
 
-.responsibility {
-  background-image: url(assets/phone-ico.png);
-  background-repeat: no-repeat;
-  background-position: left 1px top 2px;
-}
-
-.support {
-  background-image: url(assets/bubble-ico.png);
-  background-repeat: no-repeat;
-  background-position: left 0px top 2px;
-}
-
-.star {
-  background-image: url(assets/star-ico.png);
-  background-repeat: no-repeat;
-  background-position: left 0px top 2px;
-  padding-left: 81px;
-}
 
 .design h4 {
   margin-left: 1px;
@@ -312,6 +314,7 @@ color: #767e9e;
 .responsibility h4 {
   margin-left: 1px;
 }
+
 
 
 
