@@ -455,10 +455,10 @@ margin-left: 195px;
 }
 
 .star {
+  padding-left: 81px;
   background-image: url(assets/star-ico.svg);
   background-repeat: no-repeat;
   background-position: left 0px top 2px;
-  padding-left: 81px;
   background-size: 59px;
 }
 
@@ -614,7 +614,7 @@ margin-left: 195px;
 
 .about-us__introduction {
   margin: 0 0 45px 1px;
-  line-height: 30px;
+  line-height: 3.0rem;
   word-spacing: -.14ch;
 }
 
@@ -626,12 +626,12 @@ margin-left: 195px;
 }
 
 .employee-info {
-font-size: 12px;
-line-height: 21px;
-font-family: "Lato";
-text-align: justify;
-margin-bottom: 24px;
-word-spacing: -.17ch;
+  margin-bottom: 24px;
+ font-size: 1.2rem;
+ line-height: 2.1rem;
+ font-family: "Lato";
+ text-align: justify;
+ word-spacing: -.17ch;
 /*letter-spacing: -.2ch;*/
 }
 
@@ -671,7 +671,7 @@ word-spacing: -.17ch;
 
 .communication__introduction {
   margin: 0 0 44px 1px;
-  line-height: 30px;
+  line-height: 3.0rem
   text-align: justify;
   word-spacing: -.13ch;
   color: #f0d8d9;
@@ -710,8 +710,8 @@ word-spacing: -.17ch;
 
 .form__text {
   padding-left: 15px;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
   font-family: "Lato";
   text-align: left;
   color: #f48c8f;
@@ -733,7 +733,7 @@ word-spacing: -.17ch;
 .contact__introduction {
   margin-bottom: 19px;
   font-family: "Lato";
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 22px;
   text-align: justify;
   word-spacing: -.13ch;
@@ -742,10 +742,10 @@ word-spacing: -.17ch;
 
 .contact__item {
   padding-left: 23px;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "Lato";
   text-align: left;
-  line-height: 19px;
+  line-height: 1.9rem;
   color: #f0d8d9;
 }
 
@@ -758,7 +758,7 @@ word-spacing: -.17ch;
   bottom: 0;
   right: -100px;
   padding: 5px;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 18px;
   font-family: "Lato";
   text-align: center;
@@ -810,7 +810,7 @@ word-spacing: -.17ch;
 
 .copyright {
   margin-left: 2px;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: "Lato";
   text-align: left;
   word-spacing: -.18ch;
