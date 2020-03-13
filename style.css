@@ -844,4 +844,22 @@ textarea {
   border: none;
 }
 
+.active {
+  color: #f06c64;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  
+}
+
+.services,
+.portfolio,
+.about-us,
+.communication {
+  padding-top: 95px;
+	margin-top: -95px;
+}
 
