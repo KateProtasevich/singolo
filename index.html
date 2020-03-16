@@ -26,19 +26,34 @@
     <div class="slider">
         <div class="wrapper slider__wrapper">
             <button class="chev chev-left"><img src="assets/chev.png" alt=""></button>
-            <div class="image-box">
-                <div class="iphone-vertical__container">
-                    <div class="iphone-vertical__screen" ></div>
-                    <img class="iphone-vertical" src="assets/iphone.png" alt="">
-                    <img class="iphone-vertical__shadow" src="assets/iphone-shadow.png" alt="">
+            <div class="image-box" >
+                <div class="slide1 carousel-item img-active ">
+                    <div class="iphone-vertical__container">
+                        <div class="iphone-vertical" id="iphoneVertical1">
+                            <div class="iphone-vertical__screen" id="screenVertical1" ></div>
+                        </div>
+                        <img class="iphone-vertical__shadow" src="assets/iphone-shadow.png" alt="">   
+                    </div>
+                        
+                    
+                    <div class="iphone-horizontal__container">
+                        <div class="iphone-horizontal" id="iphoneHorizontal1">
+                            <div class="iphone-horizontal__screen" id="screenHorizontal1" ></div>
+                        </div>
+                        <img class="iphone-horizontal__shadow" src="assets/iphone-shadow.png" alt="">  
+                    </div>
                 </div>
-                <div class="iphone-horizontal__container">
-                    <div class="iphone-horizontal__screen"></div> 
-                    <img class="iphone-horizontal" src="assets/iphone.png" alt="">
-                    <img class="iphone-horizontal__shadow" src="assets/iphone-shadow.png" alt="">  
+                <div class="slide2 carousel-item">
+                    <div class="iphone-vertical__container">
+                        <div class="iphone-vertical" id="iphoneVertical2">
+                            <div class="iphone-vertical__screen" id="screenVertical2" ></div>
+                        </div>
+                        <img class="iphone-vertical__shadow" src="assets/iphone-shadow.png" alt="">   
+                    </div>
                 </div>
             </div>
-            <button class="chev chev-right"><img src="assets/chev.png" alt=""></button>
+            
+            <button class="chev chev-right" id="arrow"><img src="assets/chev.png" alt=""></button>
         </div>
     </div>
     <main>
@@ -79,10 +94,10 @@
             <h2 class="portfolio__caption">Portfolio</h2>
             <p class="introduction portfolio__introduction">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <div class="filter portfolio__filter">
-                <button class="filter__item padding-right-8 padding-left-8" autofocus>All</button>
-                <button class="filter__item padding-right-5">Web Design</button>
-                <button class="filter__item padding-right-5">Graphic Design</button>
-                <button class="filter__item ">Artwork</button>
+                <button class="filter__item padding-right-8 padding-left-8" id="filter__button1">All</button>
+                <button class="filter__item padding-right-5" id="filter__button2">Web Design</button>
+                <button class="filter__item padding-right-5" id="filter__button3">Graphic Design</button>
+                <button class="filter__item" id="filter__button4">Artwork</button>
             </div>
             <ul class="layout-4-column portfolio__list">
                 <li class="layout-4-column__item portfolio__list__image"></li>
@@ -149,13 +164,23 @@
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="communication__main">
-                <form class="communication__form" action="https://www.w3schools.com/action_page.php?" method="POST" target="_blank">
+                <form class="communication__form" action="https://www.w3schools.com/action_page.php?" method="POST" target="_blank" id="form">
                     <input class="form__text text-line" type="text" name="name" id="name" placeholder="Name (Required)" pattern="^([А-Яа-яЁёa-zA-z]+\s?)+$" required>
                     <input class="form__text text-line" type="email" name="email" id="email" placeholder="Email (Required)" required>
                     <input class="form__text text-line" type="text" name="subject" id="subject" placeholder="Subject">
                     <textarea class="form__text text-box" name="description" id="description" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
                     <input class="submit" type="submit" value="Submit">
                 </form>
+                <div class="hidden" id="message-block">
+                    <div id="message">
+                        <p>Письмо отправлено<br>
+                            <span id="message-subject">Тема:</span><span id="subject-result"></span><br>
+                            <span id="message-description">Описание:</span><span id="description-result"></span>
+                        </p>
+                        <button id="close-button">Ok</button>
+                    </div>
+                    
+                </div>
                 <div class="contact">
                     <h4 class="contact__caption">Contact Information</h4>
                     <p class="contact__introduction">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
