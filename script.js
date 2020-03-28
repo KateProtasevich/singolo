@@ -298,7 +298,7 @@ function closeMenu() {
     hamburger.addEventListener('click', ()=> {
         if (hamburger.classList.contains('hamburger_rotate')) {
             hamburger.classList.remove('hamburger_rotate');
-    hamburger.classList.add('hamburger_reverse');
+            hamburger.classList.add('hamburger_reverse');
             //closeMenu();
         } else {
             
@@ -312,18 +312,20 @@ function closeMenu() {
             for (let index = 1; index < children.length; index++) {
                 children[index].classList.add('bright');
                 
-            };
+            
         }
         
-        
+    }
     });
 let body = document.querySelector("script");
     nav.addEventListener('transitionend', () => {
+        
         nav.focus();    
         
     })
     nav.addEventListener('focusout', ()=> {
         closeMenu();
+        
         
     });
     

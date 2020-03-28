@@ -522,7 +522,8 @@ h2 {
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 20px;
-        padding-bottom: 23px;
+        padding-bottom: 20px;
+        border-bottom: none;
       }
       .iphone-vertical__container {
         width: 27.5%;
@@ -783,10 +784,19 @@ h2 {
   .services__wrapper {
     padding-left: 32px;
     padding-right: 29px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+  }
+  .services__introduction {
+    margin: 0 0 27px 0px; 
   }
   .item-services {
     margin-right: 0!important;
     width: 100%;
+    margin-bottom: 30px;
+  }
+  .item-services:last-child {
+    margin-bottom: 25px;
   }
 }
 
@@ -1021,6 +1031,13 @@ position: relative;
   .portfolio__wrapper {
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-bottom: none;
+  }
+  .portfolio__introduction {
+    margin: 0 0 18px 0px;
+    
   }
   .portfolio__list__image:nth-child(1n+9) {
     display: none;
@@ -1029,13 +1046,13 @@ position: relative;
     width: 47.9%;
   }
   .layout-4-column__item:nth-of-type(1n) {
-    margin-right: 10px;
+    margin-right: 13px;
   }
   .layout-4-column__item:nth-of-type(2n) {
     margin-right: 0px;
   }
   .layout-4-column__item:nth-child(1n) {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
   .layout-4-column__item:nth-child(1n+7) {
     margin-bottom: 0;
@@ -1125,6 +1142,22 @@ position: relative;
 }
 
 @media (max-width:767px) {
+  .about-us__wrapper {
+    padding-top: 43px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    
+  }
+  .about-us__introduction {
+    margin-bottom:25px;
+  }
+  .socials {
+    margin-bottom: 0px;
+  }
+  .employee-name {
+    margin: 14px 0 3px 0;
+  }
   .about-us__staff {
     flex-direction: column;
   }
@@ -1367,6 +1400,9 @@ textarea {
   .communication__form {
     width: 63.85%;
   }
+  .form__text {
+    padding-left: 7px;
+  }
 }
 
 @media (max-width:767px) {
@@ -1374,7 +1410,7 @@ textarea {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 53px;
-    padding-bottom: 47px;
+    padding-bottom: 40px;
     border-bottom: none;
   }
   .communication__main {
@@ -1385,6 +1421,7 @@ textarea {
     max-width: 100%;
     width: 100%;
   }
+  
   .contact {
     padding-left: 0;
     width: 100%;
@@ -1399,7 +1436,10 @@ textarea {
   .contact__item {
     line-height: 2.5rem;
   }
-  
+  .text-box {
+    padding-top: 3px;
+    margin-bottom: 7px;
+  }
 
 }
 
