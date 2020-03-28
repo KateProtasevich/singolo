@@ -8,28 +8,36 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body id="home">
+<body id="home" class="scroll"> 
     <header class="header" id="header">
         <div class="wrapper header__wrapper">
-            <h1><a class="logo" href="#">Singolo</a></h1>
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item menu-home"><a class="menu__item-link active" href="#home" >home</a></li>
-                    <li class="menu__item menu-services"><a class="menu__item-link" href="#services">services</a></li>
-                    <li class="menu__item menu-portfolio"><a class="menu__item-link" href="#portfolio">portfolio</a></li>
-                    <li class="menu__item menu-about"><a class="menu__item-link" href="#about">about</a></li>
-                    <li class="menu__item menu-contact"><a class="menu__item-link" href="#contact">contact</a></li>
-                </ul>
-            </nav>
+            <div class="hamburger">
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+            </div>
+            
+                <h1 class="logo"><a class="logo_link" href="#">Singolo</a></h1>
+                <nav class="navigation" tabindex="1" autofocus>
+                    <ul class="menu">
+                        <li class="menu__item menu-home"><a class="menu__item-link active" href="#home" >home</a></li>
+                        <li class="menu__item menu-services"><a class="menu__item-link" href="#services">services</a></li>
+                        <li class="menu__item menu-portfolio"><a class="menu__item-link" href="#portfolio">portfolio</a></li>
+                        <li class="menu__item menu-about"><a class="menu__item-link" href="#about">about</a></li>
+                        <li class="menu__item menu-contact"><a class="menu__item-link" href="#contact">contact</a></li>
+                    </ul>
+                </nav>
+            
+            
         </div>    
     </header> 
-    <div class="slider">
-        <div class="wrapper slider__wrapper">
-            <button class="chev chev-left"><img src="assets/chev.png" alt=""></button>
+    <div class="slider ">
+        <div class="wrapper slider__wrapper slider_color">
+            <div class="chev chev-left"><img src="assets/arrow-left.png" alt=""></div>
             <div class="image-box" >
                 <div class="slide1 carousel-item img-active ">
-                    <div class="iphone-vertical__container">
-                        <div class="iphone-vertical" id="iphoneVertical1">
+                    <div class="iphone-vertical__container iphone-vertical_slide1">
+                        <div class="iphone-vertical iphone" id="iphoneVertical1">
                             <div class="iphone-vertical__screen" id="screenVertical1" ></div>
                         </div>
                         <img class="iphone-vertical__shadow" src="assets/iphone-shadow.png" alt="">   
@@ -37,27 +45,29 @@
                         
                     
                     <div class="iphone-horizontal__container">
-                        <div class="iphone-horizontal" id="iphoneHorizontal1">
+                        <div class="iphone-horizontal iphone" id="iphoneHorizontal1">
                             <div class="iphone-horizontal__screen" id="screenHorizontal1" ></div>
                         </div>
-                        <img class="iphone-horizontal__shadow" src="assets/iphone-shadow.png" alt="">  
+                        <img class="iphone-horizontal__shadow" src="assets/shadow-hor.png" alt="">  
                     </div>
                 </div>
                 <div class="slide2 carousel-item">
+                    <img class="iphone-left iphone-back" src="assets/phone-vertical-img.png" alt="iphone-vertical">
                     <div class="iphone-vertical__container">
-                        <div class="iphone-vertical" id="iphoneVertical2">
+                        <div class="iphone-vertical iphone" id="iphoneVertical2">
                             <div class="iphone-vertical__screen" id="screenVertical2" ></div>
                         </div>
                         <img class="iphone-vertical__shadow" src="assets/iphone-shadow.png" alt="">   
                     </div>
+                    <img class="iphone-right iphone-back" src="assets/phone-vertical-img.png" alt="iphone-vertical2">
                 </div>
+                
             </div>
-            
-            <button class="chev chev-right" id="arrow"><img src="assets/chev.png" alt=""></button>
+            <div class="chev chev-right" id="arrow"><img src="assets/arrow-left.png" alt=""></div>
         </div>
     </div>
     <main>
-        <section class="services" id="services">
+        <section class="services scroll" id="services">
             <div class="wrapper services__wrapper">
             <h2 class="services__caption">Our Services</h2>
             <p class="introduction services__introduction">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -89,7 +99,7 @@
             </div>
             </div>
       </section>
-      <section class="portfolio" id="portfolio">
+      <section class="portfolio scroll" id="portfolio">
         <div class="wrapper portfolio__wrapper">
             <h2 class="portfolio__caption">Portfolio</h2>
             <p class="introduction portfolio__introduction">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -100,29 +110,29 @@
                 <button class="filter__item" id="filter__button4">Artwork</button>
             </div>
             <ul class="layout-4-column portfolio__list">
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
-                <li class="layout-4-column__item portfolio__list__image"></li>
+                <li class="layout-4-column__item portfolio__list__image image1"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image2"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image3"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image4"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image5"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image6"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image7"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image8"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image9"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image10"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image11"><div class="portfolio_content"></div></li>
+                <li class="layout-4-column__item portfolio__list__image image12"><div class="portfolio_content"></div></li>
                 
             </ul>
         </div>
     </section>
-    <section class="about-us" id="about">
+    <section class="about-us scroll" id="about">
         <div class="wrapper about-us__wrapper">
             <h2 class="about-us__caption">About Us</h2>
             <p class="introduction about-us__introduction">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="layout-3-column about-us__staff">
                 <div class="layout-3-column__item about-us__employee">
-                    <img class="employee-photo" src="assets/Adam-Jensen2.jpg" alt="Adam Jensen photo" width="300" height="300">
+                    <img class="employee-photo" src="assets/Adam-Jensen2.jpg" alt="Adam Jensen photo">
                     <h4 class="employee-name">Adam Jensen</h4>
                     <p class="employee-info">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     <ul class="socials">
@@ -133,7 +143,7 @@
                     </ul>
                 </div>
                 <div class="layout-3-column__item about-us__employee">
-                    <img class="employee-photo" src="assets/Desmond-Miles2.jpg" alt="Desmond Miles photo" width="300" height="300">
+                    <img class="employee-photo" src="assets/Desmond-Miles2.jpg" alt="Desmond Miles photo">
                     <h4 class="employee-name">Desmond Miles</h4>
                     <p class="employee-info">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
                     <ul class="socials">
@@ -144,7 +154,7 @@
                     </ul>
                 </div>
                 <div class="layout-3-column__item about-us__employee">
-                    <img class="employee-photo" src="assets/Scolara-Visari2.jpg" alt="Scolara Visari photo" width="300" height="300">
+                    <img class="employee-photo" src="assets/Scolara-Visari2.jpg" alt="Scolara Visari photo" >
                     <h4 class="employee-name">Scolara Visari</h4>
                     <p class="employee-info">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     <ul class="socials">
@@ -157,7 +167,7 @@
             </div>
         </div>
     </section>
-    <section class="communication" id="contact">
+    <section class="communication scroll" id="contact">
         <div class="wrapper communication__wrapper">
             <h2 class="communication__caption">Get a Quote</h2>
             <p class="introduction communication__introduction">
@@ -165,6 +175,7 @@
             </p>
             <div class="communication__main">
                 <form class="communication__form" action="https://www.w3schools.com/action_page.php?" method="POST" target="_blank" id="form">
+                    
                     <input class="form__text text-line" type="text" name="name" id="name" placeholder="Name (Required)" pattern="^([А-Яа-яЁёa-zA-z]+\s?)+$" required>
                     <input class="form__text text-line" type="email" name="email" id="email" placeholder="Email (Required)" required>
                     <input class="form__text text-line" type="text" name="subject" id="subject" placeholder="Subject">
@@ -191,7 +202,7 @@
                         <li><a class="contact__item contact-mail" href="mailto:KrishniovaKate@mail.ru">info@singolo.com</a></li>
                     </ul>
                 </div>
-            </div>
+            </input>
         </div>
     </section>
     </main>
