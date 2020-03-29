@@ -1,15 +1,12 @@
 'Use strict';
 
-/*window.scrollTo( 0, 999, {
-    behavior: 'smooth'
-});*/
 
 ///Header
 const Menu = document.querySelector('.menu'); 
 Menu.addEventListener('click', (event) => {
     Menu.querySelectorAll('a').forEach(elem => {
         elem.classList.remove('active');
-        //closeMenu();
+        
     })
     event.target.classList.add('active');
     
@@ -52,29 +49,8 @@ function portfolio() {
     console.log(PortfolioObj);
     PortfolioObj[0].style.listStyle = "none";
     Portfolio.innerHTML = '';
-    //PortfolioObj.forEach((elem) => {
-      //  Portfolio.append(elem); 
-    //});
-    
-    
-    //Portfolio.querySelectorAll('div').forEach((elem, i) => {
-        //let compStyles = window.getComputedStyle(elem);
-        /*console.log(compStyles.getPropertyValue('height'));*/
-        /*console.log(elem.style.backgroundImage);*/
-        //PortfolioObj[i] = compStyles.getPropertyValue('background-image');
-        //obj.position = compStyles.getPropertyValue('background-position');
-        //PortfolioObj[i] = obj;
-        //obj = {};
-    //});
 }
-//portfolio();
-//console.log(PortfolioObj);
 
-/*document.querySelector(".portfolio__list__image:nth-of-type(11)").style.backgroundImage = "url('assets/picture-12.png')";*/
-/*console.log(document.querySelector('.header__wrapper').style.backgroundColor);
-let para = document.querySelector('.header__wrapper');
-let compStyles = window.getComputedStyle(para);*/
-//console.log((11+3)%12);
 
 const FilterButton1 = document.querySelector('#filter__button1'); 
 const FilterButton2 = document.querySelector('#filter__button2'); 
@@ -83,7 +59,7 @@ const FilterButton4 = document.querySelector('#filter__button4');
 FilterButton1.addEventListener('click', () => mix(1));
 function mix(n) {
     portfolio();
-    //console.log(PortfolioObj.length);
+    
     let array = [];
     for (let i = 0; i < PortfolioObj.length; i++) {
         let j = (n+i) % PortfolioObj.length;
@@ -91,15 +67,7 @@ function mix(n) {
         Portfolio.append(PortfolioObj[j]); 
         array.push(PortfolioObj[j]);  
     };
-    //console.log(array[0]);
-    //Portfolio.append(array[0]);
-    //Portfolio.append(array[1]);
-    /*Portfolio.querySelectorAll('div').forEach((elem, i) => {
-        let j = (n+i)%12;
-        elem.style.backgroundImage = PortfolioObj[j];
-        //elem.style.backgroundPosition = PortfolioObj[j].position;
-       
-    });  */
+    
 }
 FilterButton2.addEventListener('click', () => mix(2));
 
@@ -111,13 +79,13 @@ FilterButton4.addEventListener('click', () => mix(4));
 let form = document.querySelector('form');
 const CloseButton = document.getElementById('close-button');
 const SubmitButton = document.querySelector('.submit');
-//object.onsubmit = function(){myScript};
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         
         
         let a = document.getElementById('message-block');
-        //console.log(a.parentNode);
+        
         
         const Subject = document.getElementById('subject').value.toString();
         if (Subject == '') {
@@ -213,7 +181,7 @@ document.querySelector('.chev-right').addEventListener('click', function() {
      bgColor();
      
     }
-    //console.log(items[currentItem].classList);
+    
     
     
 })
@@ -228,17 +196,17 @@ document.querySelector('.chev-left').addEventListener('click', function() {
 });
 
 function hideItem(direction) {
-    //blue();
+    
     isEnable = false;
     items[currentItem].classList.add(direction);
     items[currentItem].addEventListener('animationend', function() {
         this.classList.remove('img-active', direction);
     });
-    //blue();
+    
 }
 
 function showItem(direction) {
-    //blue();
+    
     items[currentItem].classList.add('img-next',direction);
     items[currentItem].addEventListener('animationend', function() {
         this.classList.remove('img-next', direction);
@@ -251,21 +219,14 @@ function showItem(direction) {
 function previousItem(n) {
 hideItem('to-right');
 changeCurrentItem(n - 1);
-//setTimeout(showItem, 1000, 'from-left');
-//let animated = document.querySelector('.img-active');
-//animated.onanimationend = () => {
-//showItem('from-left');
-//}
+
 showItem('from-left');
 }
 
 function nextItem(n) {
     hideItem('to-left');
     changeCurrentItem(n + 1);
-    //let animated = document.querySelector('.img-active');
-//animated.onanimationend = () => {
-    //showItem('from-right');  
-//}
+   
 showItem('from-right');
     }
 
@@ -277,31 +238,25 @@ showItem('from-right');
     let logo = document.querySelector(".logo");
     let children = document.querySelector("body").children;
     
-    //a.style.top = d+'px';
+    
     console.log(document.documentElement.clientHeight);
     
 function closeMenu() {
-    //nav.style.height = 'auto';
+    
     wrapMenu.classList.remove('wrapper__vert');
     logo.classList.remove('logo_move');
     logo.classList.add('logo_reverse');
     nav.classList.remove('navigation__mobile');
     nav.classList.add('navigation__remove');
-    //nav.style.height = document.documentElement.clientHeight+"px";
-    /*nav.addEventListener('transitionend', () => {
-        console.log('enf');
+    nav.addEventListener('transitionend', () => {
+    if (nav.classList.contains('navigation__mobile')) {
+        nav.style.height = document.documentElement.clientHeight +"px";
         
-        if (wrapMenu.classList.contains('wrapper__vert')) {
-            nav.style.height = document.documentElement.clientHeight -71 +"px";
-            wrapMenu.style.height = document.documentElement.clientHeight +"px";
-        } else {
-            wrapMenu.style.height = 'auto'; 
-            nav.style.height = 'auto'; 
-            
-        };
-    //wrapMenu.style.height = '71px';
-    //console.log(nav.style.height);
-    });*/
+    } else {
+        nav.style.height = '20px'; 
+        
+    }})
+   
     hamburger.classList.remove('hamburger_rotate');
             hamburger.classList.add('hamburger_reverse');
     for (let index = 1; index < children.length; index++) {
@@ -309,8 +264,7 @@ function closeMenu() {
         
     };
     
-    console.log('close'); 
-    console.log(document.activeElement);
+    
 }
 
 
@@ -318,42 +272,19 @@ function closeMenu() {
         if (hamburger.classList.contains('hamburger_rotate')) {
             
             closeMenu();
-            /*nav.addEventListener('transitionend', () => {
-                console.log('enf');
-                
-                if (wrapMenu.classList.contains('wrapper__vert')) {
-                    nav.style.height = document.documentElement.clientHeight -71 +"px";
-                    wrapMenu.style.height = document.documentElement.clientHeight +"px";
-                } else {
-                    nav.style.height = 'auto'; 
-                    wrapMenu.style.height = 'auto'; 
-                };
-            //wrapMenu.style.height = '71px';
-            //console.log(nav.style.height);
-            });*/
-            
-            
-            
+           
         } else {
             
-            //wrapMenu.focus(); 
+           
             wrapMenu.classList.add('wrapper__vert');
             hamburger.classList.remove('hamburger_reverse');
             hamburger.classList.add('hamburger_rotate'); 
             logo.classList.remove('logo_reverse');
             logo.classList.add('logo_move');
-            /*if (wrapMenu.classList.contains('wrapper__vert')) {
-                nav.style.height = document.documentElement.clientHeight -71 +"px";
-                wrapMenu.style.height = document.documentElement.clientHeight +"px";
-            } else {
-                nav.style.height = 'auto'; 
-                wrapMenu.style.height = '71px'; 
-            };*/
-            //nav.style.height = document.documentElement.clientHeight -71 +"px";
+            nav.style.height = document.documentElement.clientHeight +"px";
+            
             console.log(nav.style.height);
             
-            //wrapMenu.style.height = document.documentElement.clientHeight +"px";
-            //console.log(wrapMenu.style.height);
             nav.classList.add('navigation__mobile');
             nav.classList.remove('navigation__remove');
             
@@ -369,7 +300,7 @@ function closeMenu() {
 let body = document.querySelector("script");
     nav.addEventListener('transitionend', () => {
         
-        wrapMenu.focus();   
+        
         
          
         
