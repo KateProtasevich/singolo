@@ -9,7 +9,7 @@ const Menu = document.querySelector('.menu');
 Menu.addEventListener('click', (event) => {
     Menu.querySelectorAll('a').forEach(elem => {
         elem.classList.remove('active');
-        closeMenu();
+        //closeMenu();
     })
     event.target.classList.add('active');
     
@@ -272,6 +272,7 @@ showItem('from-right');
 
     /////////////
     let hamburger = document.querySelector(".hamburger");
+    let wrapMenu = document.querySelector(".header__wrapper");
     let nav = document.querySelector("nav");
     let logo = document.querySelector(".logo");
     let children = document.querySelector("body").children;
@@ -280,35 +281,83 @@ showItem('from-right');
     console.log(document.documentElement.clientHeight);
     
 function closeMenu() {
-    nav.style.height = 'auto';
-    
+    //nav.style.height = 'auto';
+    wrapMenu.classList.remove('wrapper__vert');
     logo.classList.remove('logo_move');
     logo.classList.add('logo_reverse');
     nav.classList.remove('navigation__mobile');
     nav.classList.add('navigation__remove');
+    //nav.style.height = document.documentElement.clientHeight+"px";
+    /*nav.addEventListener('transitionend', () => {
+        console.log('enf');
+        
+        if (wrapMenu.classList.contains('wrapper__vert')) {
+            nav.style.height = document.documentElement.clientHeight -71 +"px";
+            wrapMenu.style.height = document.documentElement.clientHeight +"px";
+        } else {
+            wrapMenu.style.height = 'auto'; 
+            nav.style.height = 'auto'; 
+            
+        };
+    //wrapMenu.style.height = '71px';
+    //console.log(nav.style.height);
+    });*/
+    hamburger.classList.remove('hamburger_rotate');
+            hamburger.classList.add('hamburger_reverse');
     for (let index = 1; index < children.length; index++) {
         children[index].classList.remove('bright');
         
     };
     
-    
+    console.log('close'); 
+    console.log(document.activeElement);
 }
 
 
-    hamburger.addEventListener('click', ()=> {
+    hamburger.addEventListener('click', (event)=> {
         if (hamburger.classList.contains('hamburger_rotate')) {
-            hamburger.classList.remove('hamburger_rotate');
-            hamburger.classList.add('hamburger_reverse');
-            //closeMenu();
+            
+            closeMenu();
+            /*nav.addEventListener('transitionend', () => {
+                console.log('enf');
+                
+                if (wrapMenu.classList.contains('wrapper__vert')) {
+                    nav.style.height = document.documentElement.clientHeight -71 +"px";
+                    wrapMenu.style.height = document.documentElement.clientHeight +"px";
+                } else {
+                    nav.style.height = 'auto'; 
+                    wrapMenu.style.height = 'auto'; 
+                };
+            //wrapMenu.style.height = '71px';
+            //console.log(nav.style.height);
+            });*/
+            
+            
+            
         } else {
             
+            //wrapMenu.focus(); 
+            wrapMenu.classList.add('wrapper__vert');
             hamburger.classList.remove('hamburger_reverse');
             hamburger.classList.add('hamburger_rotate'); 
             logo.classList.remove('logo_reverse');
             logo.classList.add('logo_move');
-            nav.style.height = document.documentElement.clientHeight+"px";
+            /*if (wrapMenu.classList.contains('wrapper__vert')) {
+                nav.style.height = document.documentElement.clientHeight -71 +"px";
+                wrapMenu.style.height = document.documentElement.clientHeight +"px";
+            } else {
+                nav.style.height = 'auto'; 
+                wrapMenu.style.height = '71px'; 
+            };*/
+            //nav.style.height = document.documentElement.clientHeight -71 +"px";
+            console.log(nav.style.height);
+            
+            //wrapMenu.style.height = document.documentElement.clientHeight +"px";
+            //console.log(wrapMenu.style.height);
             nav.classList.add('navigation__mobile');
             nav.classList.remove('navigation__remove');
+            
+            
             for (let index = 1; index < children.length; index++) {
                 children[index].classList.add('bright');
                 
@@ -320,14 +369,20 @@ function closeMenu() {
 let body = document.querySelector("script");
     nav.addEventListener('transitionend', () => {
         
-        nav.focus();    
+        wrapMenu.focus();   
+        
+         
         
     })
-    nav.addEventListener('focusout', ()=> {
+    wrapMenu.addEventListener('blur', ()=> {
         closeMenu();
+        console.log('blur');
+        
         
         
     });
+
+    
     
     
     
